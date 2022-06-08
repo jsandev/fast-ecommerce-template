@@ -1,8 +1,18 @@
 import type { NextPage } from "next";
 
+import { Layout } from "components/Layout";
+import Head from "next/head";
+
 const Home: NextPage = () => {
   return (
-    <div className="flex w-full h-full justify-center items-center">Fast Ecommerce Template</div>
+    <>
+      <Head>
+        <title>Home | Fast Ecommerce Template</title>
+      </Head>
+      <Layout>
+        <h1>Fast Ecommerce Template</h1>
+      </Layout>
+    </>
   );
 };
 
