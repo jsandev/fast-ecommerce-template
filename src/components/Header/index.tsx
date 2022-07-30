@@ -3,7 +3,7 @@ import { FiHeart, FiUser, FiShoppingCart } from "react-icons/fi";
 
 export const Header = () => {
   return (
-    <header className="w-full h-[80px] flex items-center justify-center">
+    <header className="w-full h-[80px] flex items-center justify-center px-[1.25rem] xs:px-[1.5rem] md:px-[2.5rem] lg:px-[3rem]">
       <div className="w-full max-w-[1200px] mx-auto flex items-center justify-between">
         <Link href="/">
           <a className="font-bold text-[1.5rem] text-turquoise">JSandoval.</a>
