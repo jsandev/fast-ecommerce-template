@@ -3,6 +3,7 @@ import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 
+import { Benefits } from "components/Benefits";
 import { Layout } from "components/Layout";
 
 import { FiArrowRight } from "react-icons/fi";
@@ -101,6 +102,7 @@ const Home: NextPage = () => {
             </div>
           </div>
         </section>
+        <Benefits />
       </Layout>
     </>
   );
