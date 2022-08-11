@@ -5,10 +5,68 @@ import Image from "next/image";
 
 import { Benefits } from "components/Benefits";
 import { Layout } from "components/Layout";
+import { ProductsGroup } from "components/ProductsGroup";
+import { ICardProduct } from "components/CardProduct";
 
 import { FiArrowRight } from "react-icons/fi";
 
 const Home: NextPage = () => {
+  const topSellingProducts: ICardProduct[] = [
+    {
+      name: "Logitech MX MASTER 3S",
+      price: 99.99,
+      image: require("../assets/images/mouse-logitech-mx-master.webp"),
+    },
+    {
+      name: "Redragon KUMARA K552",
+      price: 145.99,
+      image: require("../assets/images/redragon-kumara-main.png"),
+    },
+    {
+      name: "Monitor Samsung 32'",
+      price: 499.99,
+      image: require("../assets/images/monitor-samsung-main.png"),
+    },
+    {
+      name: "JBL Tune 760NC",
+      price: 199.99,
+      image: require("../assets/images/headphones-jbl-main.webp"),
+    },
+  ];
+
+  const onSaleProducts: ICardProduct[] = [
+    {
+      name: "Logitech Mouse G502 Hero",
+      price: 69.99,
+      image: require("../assets/images/logitech-mouse-main.webp"),
+    },
+    {
+      name: "Headphones Logitech G935",
+      price: 310.49,
+      image: require("../assets/images/auriculares-logitech-main.webp"),
+    },
+    {
+      name: "Speaker Surround sound",
+      price: 699.99,
+      image: require("../assets/images/speaker-surround-main.webp"),
+    },
+    {
+      name: "Logitech Keyboard G413",
+      price: 299.99,
+      image: require("../assets/images/logitech-keyboard-main.webp"),
+    },
+    {
+      name: "C920 HD PRO WEBCAM",
+      price: 175.99,
+      image: require("../assets/images/logitech-webcam-pro-main.png"),
+    },
+    {
+      name: "Logitech Keyboard K380",
+      price: 199.99,
+      image: require("../assets/images/logitech-keyboard-dark-main.webp"),
+    },
+  ];
+
   return (
     <>
       <Head>
@@ -41,6 +99,7 @@ const Home: NextPage = () => {
                 height={350}
                 src={require("../assets/images/sony-main.jpg")}
                 alt=""
+                priority
               />
             </div>
             <div className="w-full grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-1 gap-5">
@@ -102,6 +161,8 @@ const Home: NextPage = () => {
             </div>
           </div>
         </section>
+        <ProductsGroup titleSection="Top Selling Products" products={topSellingProducts} />
+        <ProductsGroup titleSection="On sale" products={onSaleProducts} />
         <Benefits />
       </Layout>
     </>
