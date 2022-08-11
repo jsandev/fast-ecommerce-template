@@ -162,6 +162,40 @@ const Home: NextPage = () => {
           </div>
         </section>
         <ProductsGroup titleSection="Top Selling Products" products={topSellingProducts} />
+        <section className="w-full bg-turquoise10 px-[1.25rem] mb-[5rem] xs:px-[1.5rem] md:px-[2.5rem] lg:px-[3rem]">
+          <div className="w-full max-w-[1200px] mx-auto flex flex-col items-center justify-between gap-6 py-[1.875rem] md:flex-row">
+            <div className="max-w-[500px] order-2 md:order-none">
+              <Image
+                src={require("../assets/images/airpods-banner.png")}
+                alt="Apple Airpods True Wireless"
+                priority
+              />
+            </div>
+            <div className="flex flex-col items-center md:items-end">
+              <h3 className="font-normal text-[1.5rem] text-gray text-right lg:text-[2rem]">
+                Deal of the Day
+              </h3>
+              <h5 className="font-normal text-[1rem] text-gray text-right lg:text-[1.25rem]">
+                Limited quantities
+              </h5>
+              <h1 className="font-extrabold text-[2.25rem] text-black text-center mt-[2.5rem] mb-2 lg:text-[2.8125rem] md:text-right md:mb-0">
+                Apple Airpods True Wireless
+              </h1>
+              <div className="flex flex-col flex-nowrap items-center mb-[1.875rem] md:flex-row md:gap-[0.625rem] md:mb-[3.75rem] md:items-end">
+                <h4 className="font-bold text-[1.75rem] line-through text-turquoise md:mb-[0.875rem] order-2 md:order-none">
+                  $169.99
+                </h4>
+                <h1 className="font-semibold text-[3rem] text-black lg:text-[4rem]">$129.99</h1>
+              </div>
+              <Link href="/">
+                <a className="h-[40px] flex items-center justify-center bg-turquoise text-[0.875rem] text-white rounded-[1.875rem] px-[1.5625rem]">
+                  Shop now
+                  <FiArrowRight size={24} />
+                </a>
+              </Link>
+            </div>
+          </div>
+        </section>
         <ProductsGroup titleSection="On sale" products={onSaleProducts} />
         <Benefits />
       </Layout>
