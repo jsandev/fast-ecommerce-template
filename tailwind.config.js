@@ -44,6 +44,7 @@ module.exports = {
       turquoise: "#00ADB5",
       turquoise10: "#00ADB51A",
       orange: "#F98A24",
+      "orange-hover": "#ED8729",
       red: "#DD4A48",
       dark: "#000000",
     },

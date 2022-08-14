@@ -20,7 +20,7 @@ export const CardProduct: React.FC<ICardProduct> = ({ image, name, price }) => {
         </span>
       </div>
       <div className="p-[0.625rem]">
-        <Link href={`/`}>
+        <Link href={`/some-product`}>
           <a className="font-medium hover:underline text-[1rem] text-black">{name}</a>
         </Link>
         <h4 className="font-bold text-[1.125rem] text-turquoise">${price}</h4>
