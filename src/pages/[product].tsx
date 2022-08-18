@@ -10,6 +10,7 @@ import { FiChevronRight, FiShoppingCart, FiHeart } from "react-icons/fi";
 import Image from "next/image";
 import { ProductsGroup } from "components/ProductsGroup";
 import { ICardProduct } from "components/CardProduct";
+import { QuantityActions } from "components/QuantityActions";
 
 const Product: NextPage = () => {
   const images = [
@@ -111,28 +112,14 @@ const Product: NextPage = () => {
                   Available <span className="font-medium text-orange">30</span> units
                 </h5>
               </div>
-              <div className="flex items-center gap-[5px] mt-[24px] mb-[1.875rem] xs:mt-[2.5rem]">
-                <button
-                  className="outline-none appearance-none w-[40px] h-[40px] text-[1.125rem] text-gray flex items-center justify-center bg-[#F2F2F2] rounded-[5px] hover:bg-gray50"
-                  onClick={handleDismiss}
-                >
-                  {"-"}
-                </button>
-                <input
-                  ref={inputRef}
-                  type="number"
-                  className="outline-none appearance-none w-[50px] h-[40px] text-center text-[1.125rem] text-gray border-1 border-turquoise rounded-[5px]"
-                  value={quantity.toString()}
-                  min={1}
-                  onChange={(e) => setQuantity(parseInt(e.target.value))}
-                />
-                <button
-                  className="outline-none appearance-none w-[40px] h-[40px] text-[1.125rem] text-gray flex items-center justify-center bg-[#F2F2F2] rounded-[5px] hover:bg-gray50"
-                  onClick={handleAdd}
-                >
-                  {"+"}
-                </button>
-              </div>
+              <QuantityActions
+                ref={inputRef}
+                handleAdd={handleAdd}
+                handleDismiss={handleDismiss}
+                quantity={quantity}
+                setQuantity={setQuantity}
+                className="mt-[24px] mb-[1.875rem] xs:mt-[2.5rem]"
+              />
               <div className="flex flex-col xs:flex-row xs:items-center gap-6">
                 <button className="outline-none appearance-none text-[0.875rem] bg-orange hover:bg-orange-hover text-white flex justify-center items-center gap-[10px] rounded-[30px] px-6 py-[10px]">
                   Add to card <FiShoppingCart size={20} />
