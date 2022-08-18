@@ -1,3 +1,5 @@
+import { css } from "styled-components";
+
 interface IBreakPoints {
   xs: number;
   sm: number;
@@ -15,3 +17,13 @@ export const BREAKPOINTS: IBreakPoints = {
 };
 
 export const CUSTOM_TRANSITION = "250ms cubic-bezier(0.33, 1, 0.68, 1)";
+
+export const hideScroll = css`
+  /* Safari, Chrome */
+  &::-webkit-scrollbar {
+    display: none;
+    width: 0;
+  }
+  /* Firefox */
+  scrollbar-width: none;
+`;
