@@ -16,7 +16,7 @@ export const Header = () => {
         </Link>
         <ul className="list-none flex items-center gap-6">
           <li>
-            <Link href="/">
+            <Link href="/wishlist">
               <a className="relative">
                 <FiHeart size={24} />
                 <span className="w-[1rem] h-[1rem] absolute -top-[6px] -right-[6px] flex justify-center items-center bg-red rounded-circle font-semibold text-[0.625rem] text-white">
