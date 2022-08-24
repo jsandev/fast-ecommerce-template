@@ -42,6 +42,7 @@ module.exports = {
       gray: "#363434",
       gray50: "#EBEBEB",
       turquoise: "#00ADB5",
+      "turquoise-hover": "#019DA5",
       turquoise10: "#00ADB51A",
       orange: "#F98A24",
       "orange-hover": "#ED8729",
@@ -49,6 +50,9 @@ module.exports = {
       dark: "#000000",
     },
     fill: (theme) => theme("colors"),
+    fontFamily: {
+      poppins: ["Poppins", "sans-serif"],
+    },
     fontSize: {
       10: "10px",
       12: "12px",

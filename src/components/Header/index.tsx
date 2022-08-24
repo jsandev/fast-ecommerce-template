@@ -36,12 +36,11 @@ export const Header = () => {
               </span>
             </div>
           </li>
-          <li>
-            <Link href="/">
-              <a>
-                <FiUser size={24} />
-              </a>
-            </Link>
+          <li
+            className="cursor-pointer"
+            onClick={() => dispatch(navigationActions.modalLoginVisibleToggled())}
+          >
+            <FiUser size={24} />
           </li>
         </ul>
       </div>
