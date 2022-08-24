@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 
 import { navigationActions } from "store/navigation";
 
-import { FiHeart, FiUser, FiShoppingCart } from "react-icons/fi";
+import { FiHeart, FiUser, FiShoppingCart, FiMenu } from "react-icons/fi";
 
 export const Header = () => {
   const dispatch = useDispatch();
@@ -14,7 +14,7 @@ export const Header = () => {
         <Link href="/">
           <a className="font-bold text-[1.5rem] text-turquoise">JSandoval.</a>
         </Link>
-        <ul className="list-none flex items-center gap-6">
+        <ul className="hidden list-none xs:flex items-center gap-6">
           <li>
             <Link href="/wishlist">
               <a className="relative">
@@ -43,6 +43,9 @@ export const Header = () => {
             <FiUser size={24} />
           </li>
         </ul>
+        <div className="w-[2rem] h-[2rem] flex justify-center items-center cursor-pointer xs:hidden">
+          <FiMenu size={20} />
+        </div>
       </div>
     </header>
   );

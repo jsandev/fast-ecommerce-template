@@ -9,7 +9,7 @@ export const navigationSlice = createSlice({
   name: "navigation",
   initialState: {
     viewCartVisible: false,
-    modalLoginVisible: true,
+    modalLoginVisible: false,
   } as IState,
   reducers: {
     viewCartVisibleToggled: (state) => {
